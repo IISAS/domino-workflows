@@ -11,18 +11,18 @@ dag_config = { k: (v if k not in dt_keys else parse(v)) for k, v in dag_config_0
 dag_config = {**dag_config, 'is_paused_upon_creation': False}
 
 with DAG(**dag_config) as dag:
-    SleepPiece051688b3083e434cbead3e58497cdc23x = Task(
+    sleeppiece9a274bfeaa674202949da19192cc3411x = Task(
         dag,
-        task_id='SleepPiece051688b3083e434cbead3e58497cdc23x',
+        task_id='sleeppiece051688b3083e434cbead3e58497cdc23x',
         workspace_id=1,
         workflow_shared_storage={'source': 'None', 'mode': 'Read/Write', 'provider_options': {}},
         container_resources={'requests': {'cpu': '100.0m', 'memory': '128.0Mi'}, 'limits': {'cpu': '100.0m', 'memory': '128.0Mi'}, 'use_gpu': False},
         piece={'name': 'SleepPiece', 'source_image': 'ghcr.io/tauffer-consulting/default_domino_pieces:0.8.1-group0', 'repository_url': 'https://github.com/Tauffer-Consulting/default_domino_pieces', 'repository_version': '0.8.1'},
         piece_input_kwargs={'sleep_time': 1}
     )()
-    SleepPiece9a274bfeaa674202949da19192cc3411x = Task(
+    sleeppiece9a274bfeaa674202949da19192cc3411x = Task(
         dag,
-        task_id='SleepPiece_9a274bfeaa674202949da19192cc3411',
+        task_id='sleeppiece9a274bfeaa674202949da19192cc3411x',
         workspace_id=1,
         workflow_shared_storage={'source': 'None', 'mode': 'Read/Write', 'provider_options': {}},
         container_resources={'requests': {'cpu': '100.0m', 'memory': '128.0Mi'}, 'limits': {'cpu': '100.0m', 'memory': '128.0Mi'}, 'use_gpu': False},
@@ -30,4 +30,4 @@ with DAG(**dag_config) as dag:
         piece_input_kwargs={'sleep_time': 1}
     )()
 
-    SleepPiece9a274bfeaa674202949da19192cc3411x.set_upstream([globals()[t] for t in ['SleepPiece051688b3083e434cbead3e58497cdc23x']])
+    sleeppiece9a274bfeaa674202949da19192cc3411x.set_upstream([globals()[t] for t in ['sleeppiece9a274bfeaa674202949da19192cc3411x']])
