@@ -29,5 +29,5 @@ with DAG(**dag_config) as dag:
         piece={'name': 'LogPiece', 'source_image': 'ghcr.io/tauffer-consulting/default_domino_pieces:0.8.1-group0', 'repository_url': 'https://github.com/Tauffer-Consulting/default_domino_pieces', 'repository_version': '0.8.1'},
         piece_input_kwargs={'input_str': 'default value', 'input_int': 10, 'input_float': 10.5, 'input_bool': False, 'input_enum': 'option1', 'input_date': '2023-01-01', 'input_time': '16:20:00', 'input_datetime': '2023-01-01T16:20:00', 'input_array': ['default_1', 'default_2', 'default_3'], 'input_code': "print('Hello world!')"}
     )()
-
+    print("XXXXXXXXX: ", LogPiece_228382ca75574560a8219931752f7a5e)
     LogPiece_228382ca75574560a8219931752f7a5e.set_upstream([globals()[t] for t in ['StringOper_b205b5da2ed849ee8836cda1f425fef6']])
