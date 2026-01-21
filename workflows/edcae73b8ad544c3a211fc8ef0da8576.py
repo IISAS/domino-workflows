@@ -20,6 +20,3 @@ with DAG(**dag_config) as dag:
         piece={'name': 'SleepPiece', 'source_image': 'ghcr.io/iisas/default_domino_pieces:0.9.0-group0', 'repository_url': 'https://github.com/IISAS/default_domino_pieces', 'repository_version': '0.9.0'},
         piece_input_kwargs={'sleep_time': 1}
     )()
-
-print("XXXXXXXXXX: ", SleepPiece_ddc87bc790c141038cdd01841138b2a9)
-
