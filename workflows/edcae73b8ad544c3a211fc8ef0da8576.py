@@ -11,9 +11,9 @@ dag_config = { k: (v if k not in dt_keys else parse(v)) for k, v in dag_config_0
 dag_config = {**dag_config, 'is_paused_upon_creation': False}
 
 with DAG(**dag_config) as dag:
-    SleepPiece_ddc87bc790c141038cdd01841138b2a9 = Task(
+    SleepPieceddc87bc790c141038cdd01841138b2a9x = Task(
         dag,
-        task_id='SleepPiece_ddc87bc790c141038cdd01841138b2a9',
+        task_id='SleepPieceddc87bc790c141038cdd01841138b2a9x',
         workspace_id=1,
         workflow_shared_storage={'source': 'None', 'mode': 'Read/Write', 'provider_options': {}},
         container_resources={'requests': {'cpu': '100.0m', 'memory': '128.0Mi'}, 'limits': {'cpu': '100.0m', 'memory': '128.0Mi'}, 'use_gpu': False},
