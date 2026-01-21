@@ -30,4 +30,4 @@ with DAG(**dag_config) as dag:
         piece_input_kwargs={'sleep_time': 1}
     )()
 
-    sleeppiece9a274bfeaa674202949da19192cc3411x.set_upstream([globals()[t] for t in ['sleeppiece9a274bfeaa674202949da19192cc3411x']])
+    sleeppiece9a274bfeaa674202949da19192cc3411x.set_upstream([globals()[t] for t in ['sleeppiece051688b3083e434cbead3e58497cdc23x']])
