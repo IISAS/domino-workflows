@@ -21,3 +21,5 @@ with DAG(**dag_config) as dag:
         piece_input_kwargs={'sleep_time': 1}
     )()
 
+print("XXXXXXXXXX: ", SleepPiece_ddc87bc790c141038cdd01841138b2a9)
+
