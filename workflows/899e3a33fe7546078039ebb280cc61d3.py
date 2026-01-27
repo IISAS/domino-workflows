@@ -13,7 +13,7 @@ dag_config = {**dag_config, 'is_paused_upon_creation': False}
 with DAG(**dag_config) as dag:
     KafkaConsu_f8032f4ba7bf453ebd1eaf57a8c0ee2d = Task(
         dag,
-        task_id='KafkaConsu_f8032f4ba7bf453ebd1eaf57a8c0ee2d',
+        task_id='KafkaConsu-f8032f4ba7bf453ebd1eaf57a8c0ee2d',
         workspace_id=1,
         workflow_shared_storage={'source': 'Local', 'mode': 'Read/Write', 'provider_options': {}},
         container_resources={'requests': {'cpu': '500.0m', 'memory': '512.0Mi'}, 'limits': {'cpu': '500.0m', 'memory': '512.0Mi'}, 'use_gpu': False},
