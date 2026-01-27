@@ -13,7 +13,7 @@ dag_config = {**dag_config, 'is_paused_upon_creation': False}
 with DAG(**dag_config) as dag:
     YoutubeLis_3864b50a62f341a8a89e2af15421920d = Task(
         dag,
-        task_id='YoutubeLis_3864b50a62f341a8a89e2af15421920d',
+        task_id='YoutubeLis-3864b50a62f341a8a89e2af15421920d',
         workspace_id=1,
         workflow_shared_storage={'source': 'Local', 'mode': 'Read/Write', 'provider_options': {}},
         container_resources={'requests': {'cpu': '500.0m', 'memory': '512.0Mi'}, 'limits': {'cpu': '500.0m', 'memory': '512.0Mi'}, 'use_gpu': False},
@@ -22,7 +22,7 @@ with DAG(**dag_config) as dag:
     )()
     GetItemFro_6335e5bd838e4ab78784652a2ca1d061 = Task(
         dag,
-        task_id='GetItemFro_6335e5bd838e4ab78784652a2ca1d061',
+        task_id='GetItemFro-6335e5bd838e4ab78784652a2ca1d061',
         workspace_id=1,
         workflow_shared_storage={'source': 'Local', 'mode': 'Read/Write', 'provider_options': {}},
         container_resources={'requests': {'cpu': '100.0m', 'memory': '128.0Mi'}, 'limits': {'cpu': '100.0m', 'memory': '128.0Mi'}, 'use_gpu': False},
@@ -31,7 +31,7 @@ with DAG(**dag_config) as dag:
     )()
     YoutubeDow_25e42c9d0a3c48148f3bb8ffc4fa60ed = Task(
         dag,
-        task_id='YoutubeDow_25e42c9d0a3c48148f3bb8ffc4fa60ed',
+        task_id='YoutubeDow-25e42c9d0a3c48148f3bb8ffc4fa60ed',
         workspace_id=1,
         workflow_shared_storage={'source': 'Local', 'mode': 'Read/Write', 'provider_options': {}},
         container_resources={'requests': {'cpu': '500.0m', 'memory': '512.0Mi'}, 'limits': {'cpu': '500.0m', 'memory': '512.0Mi'}, 'use_gpu': False},
@@ -40,7 +40,7 @@ with DAG(**dag_config) as dag:
     )()
     AudioTrans_ccaf7bd318eb47d9bfff44ec70b316eb = Task(
         dag,
-        task_id='AudioTrans_ccaf7bd318eb47d9bfff44ec70b316eb',
+        task_id='AudioTrans-ccaf7bd318eb47d9bfff44ec70b316eb',
         workspace_id=1,
         workflow_shared_storage={'source': 'Local', 'mode': 'Read/Write', 'provider_options': {}},
         container_resources={'requests': {'cpu': '500.0m', 'memory': '512.0Mi'}, 'limits': {'cpu': '500.0m', 'memory': '512.0Mi'}, 'use_gpu': False},
@@ -49,7 +49,7 @@ with DAG(**dag_config) as dag:
     )()
     TextSummar_834a26033d2944f89b92a891db4dc113 = Task(
         dag,
-        task_id='TextSummar_834a26033d2944f89b92a891db4dc113',
+        task_id='TextSummar-834a26033d2944f89b92a891db4dc113',
         workspace_id=1,
         workflow_shared_storage={'source': 'Local', 'mode': 'Read/Write', 'provider_options': {}},
         container_resources={'requests': {'cpu': '100.0m', 'memory': '128.0Mi'}, 'limits': {'cpu': '100.0m', 'memory': '128.0Mi'}, 'use_gpu': False},
@@ -58,7 +58,7 @@ with DAG(**dag_config) as dag:
     )()
     EmailSende_dc44dcf44dd543f7a5f684ea4ae5dcf9 = Task(
         dag,
-        task_id='EmailSende_dc44dcf44dd543f7a5f684ea4ae5dcf9',
+        task_id='EmailSende-dc44dcf44dd543f7a5f684ea4ae5dcf9',
         workspace_id=1,
         workflow_shared_storage={'source': 'Local', 'mode': 'Read/Write', 'provider_options': {}},
         container_resources={'requests': {'cpu': '500.0m', 'memory': '200.0Mi'}, 'limits': {'cpu': '500.0m', 'memory': '200.0Mi'}, 'use_gpu': False},
