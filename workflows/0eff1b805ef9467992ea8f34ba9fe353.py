@@ -27,7 +27,7 @@ with DAG(**dag_config) as dag:
         workflow_shared_storage={'source': 'Local', 'mode': 'Read/Write', 'provider_options': {}},
         container_resources={'requests': {'cpu': '100.0m', 'memory': '128.0Mi'}, 'limits': {'cpu': '100.0m', 'memory': '128.0Mi'}, 'use_gpu': False},
         piece={'name': 'ImageFilterPiece', 'source_image': 'ghcr.io/tauffer-consulting/default_domino_pieces:0.8.1-group0', 'repository_url': 'https://github.com/Tauffer-Consulting/default_domino_pieces', 'repository_version': '0.8.1'},
-        piece_input_kwargs={'input_image': {'type': 'fromUpstream', 'upstream_task_id': 'HttpReques_27dd10b0cd4b41a5bb118468b0a3c60b', 'output_arg': 'base64_bytes_data'}, 'sepia': False, 'black_and_white': True, 'brightness': False, 'darkness': False, 'contrast': False, 'red': False, 'green': False, 'blue': False, 'cool': True, 'warm': False, 'output_type': 'both'}
+        piece_input_kwargs={'input_image': {'type': 'fromUpstream', 'upstream_task_id': 'HttpRequest_27dd10b0cd4b41a5bb118468b0a3c60b', 'output_arg': 'base64_bytes_data'}, 'sepia': False, 'black_and_white': True, 'brightness': False, 'darkness': False, 'contrast': False, 'red': False, 'green': False, 'blue': False, 'cool': True, 'warm': False, 'output_type': 'both'}
     )()
 
     ImageFilter_7a0d7be2528e4149831ad0a4308dcb62.set_upstream([globals()[t] for t in ['HttpRequest_27dd10b0cd4b41a5bb118468b0a3c60b']])
