@@ -13,7 +13,7 @@ dag_config = {**dag_config, 'is_paused_upon_creation': False}
 with DAG(**dag_config) as dag:
     HttpReques_6732124a880b4af8bd64c58db53a85d4 = Task(
         dag,
-        task_id='HttpReques_6732124a880b4af8bd64c58db53a85d4',
+        task_id='httpreques-6732124a880b4af8bd64c58db53a85d4',
         workspace_id=1,
         workflow_shared_storage={'source': 'Local', 'mode': 'Read/Write', 'provider_options': {}},
         container_resources={'requests': {'cpu': '100.0m', 'memory': '128.0Mi'}, 'limits': {'cpu': '100.0m', 'memory': '128.0Mi'}, 'use_gpu': False},
@@ -22,7 +22,7 @@ with DAG(**dag_config) as dag:
     )()
     ImageFilte_43b758122d3c45c89a0561e8dec358c1 = Task(
         dag,
-        task_id='ImageFilte_43b758122d3c45c89a0561e8dec358c1',
+        task_id='imagefilte-43b758122d3c45c89a0561e8dec358c1',
         workspace_id=1,
         workflow_shared_storage={'source': 'Local', 'mode': 'Read/Write', 'provider_options': {}},
         container_resources={'requests': {'cpu': '100.0m', 'memory': '128.0Mi'}, 'limits': {'cpu': '100.0m', 'memory': '128.0Mi'}, 'use_gpu': False},
