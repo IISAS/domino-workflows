@@ -13,7 +13,7 @@ dag_config = {**dag_config, 'is_paused_upon_creation': False}
 with DAG(**dag_config) as dag:
     HttpReques_db9b72336a854200b9fcd41b48d69024 = Task(
         dag,
-        task_id='HttpReques_db9b72336a854200b9fcd41b48d69024',
+        task_id='httpreques-db9b72336a854200b9fcd41b48d69024',
         workspace_id=1,
         workflow_shared_storage={'source': 'Local', 'mode': 'Read/Write', 'provider_options': {}},
         container_resources={'requests': {'cpu': '100.0m', 'memory': '128.0Mi'}, 'limits': {'cpu': '100.0m', 'memory': '128.0Mi'}, 'use_gpu': False},
@@ -22,21 +22,21 @@ with DAG(**dag_config) as dag:
     )()
     ImageFilte_03288d1e8caf4426932809fadcb7edb7 = Task(
         dag,
-        task_id='ImageFilte_03288d1e8caf4426932809fadcb7edb7',
+        task_id='imagefilte-03288d1e8caf4426932809fadcb7edb7',
         workspace_id=1,
         workflow_shared_storage={'source': 'Local', 'mode': 'Read/Write', 'provider_options': {}},
         container_resources={'requests': {'cpu': '100.0m', 'memory': '128.0Mi'}, 'limits': {'cpu': '100.0m', 'memory': '128.0Mi'}, 'use_gpu': False},
         piece={'name': 'ImageFilterPiece', 'source_image': 'ghcr.io/iisas/default_domino_pieces:0.9.0-group0', 'repository_url': 'https://github.com/IISAS/default_domino_pieces', 'repository_version': '0.9.0'},
-        piece_input_kwargs={'input_image': {'type': 'fromUpstream', 'upstream_task_id': 'HttpReques_db9b72336a854200b9fcd41b48d69024', 'output_arg': 'base64_bytes_data'}, 'sepia': True, 'black_and_white': False, 'brightness': False, 'darkness': False, 'contrast': False, 'red': False, 'green': True, 'blue': False, 'cool': False, 'warm': False, 'output_type': 'both'}
+        piece_input_kwargs={'input_image': {'type': 'fromUpstream', 'upstream_task_id': 'httpreques-db9b72336a854200b9fcd41b48d69024', 'output_arg': 'base64_bytes_data'}, 'sepia': True, 'black_and_white': False, 'brightness': False, 'darkness': False, 'contrast': False, 'red': False, 'green': True, 'blue': False, 'cool': False, 'warm': False, 'output_type': 'both'}
     )()
     SaveImageP_96574846d789416c8f4f8885bea5411c = Task(
         dag,
-        task_id='SaveImageP_96574846d789416c8f4f8885bea5411c',
+        task_id='saveimagep-96574846d789416c8f4f8885bea5411c',
         workspace_id=1,
         workflow_shared_storage={'source': 'Local', 'mode': 'Read/Write', 'provider_options': {}},
         container_resources={'requests': {'cpu': '100.0m', 'memory': '128.0Mi'}, 'limits': {'cpu': '100.0m', 'memory': '128.0Mi'}, 'use_gpu': False},
         piece={'name': 'SaveImagePiece', 'source_image': 'ghcr.io/iisas/default_domino_pieces:0.9.0-group0', 'repository_url': 'https://github.com/IISAS/default_domino_pieces', 'repository_version': '0.9.0'},
-        piece_input_kwargs={'base64_data': {'type': 'fromUpstream', 'upstream_task_id': 'ImageFilte_03288d1e8caf4426932809fadcb7edb7', 'output_arg': 'image_file_path'}}
+        piece_input_kwargs={'base64_data': {'type': 'fromUpstream', 'upstream_task_id': 'imagefilte-03288d1e8caf4426932809fadcb7edb7', 'output_arg': 'image_file_path'}}
     )()
 
     ImageFilte_03288d1e8caf4426932809fadcb7edb7.set_upstream([globals()[t] for t in ['HttpReques_db9b72336a854200b9fcd41b48d69024']])
