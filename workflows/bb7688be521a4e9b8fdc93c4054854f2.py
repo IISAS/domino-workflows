@@ -31,7 +31,7 @@ with DAG(**dag_config) as dag:
     )()
     SaveImageP_96574846d789416c8f4f8885bea5411c = Task(
         dag,
-        task_id='saveimageo_96574846d789416c8f4f8885bea5411c',
+        task_id='saveimageo-96574846d789416c8f4f8885bea5411c',
         workspace_id=1,
         workflow_shared_storage={'source': 'Local', 'mode': 'Read/Write', 'provider_options': {}},
         container_resources={'requests': {'cpu': '100.0m', 'memory': '128.0Mi'}, 'limits': {'cpu': '100.0m', 'memory': '128.0Mi'}, 'use_gpu': False},
