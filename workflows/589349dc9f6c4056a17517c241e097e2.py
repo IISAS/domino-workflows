@@ -30,4 +30,4 @@ with DAG(**dag_config) as dag:
         piece_input_kwargs={'url': 'https://images.pexels.com/photos/4055758/pexels-photo-4055758.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 'method': 'GET', 'bearer_token': 'ZZZZZ', 'body_json_data': '{\n    "key_1": "value_1",\n    "key_2": "value_2"\n}\n'}
     )()
 
-    imagefilter-cec97ebb06ea41279e13502128a315e8.set_upstream([globals()[t] for t in ['httprequest_040758724d94477d93e9b073f6b2e8cb']])
+    imagefilter_cec97ebb06ea41279e13502128a315e8.set_upstream([globals()[t] for t in ['httprequest_040758724d94477d93e9b073f6b2e8cb']])
