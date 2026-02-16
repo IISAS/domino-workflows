@@ -3,7 +3,7 @@ from dateutil.parser import parse
 from airflow.sdk import DAG
 from domino.task import Task
 
-dag_config_0 = {'start_date': '2026-02-16T19:25:00', 'schedule': None, 'catchup': False, 'dag_id': '35431c78f7a24a29a30d46a60e6fe846'}
+dag_config_0 = {'start_date': '2026-02-16T18:32:00', 'schedule': None, 'catchup': False, 'dag_id': '35431c78f7a24a29a30d46a60e6fe846'}
 
 # Parse datetime values
 dt_keys = ['start_date', 'end_date']
