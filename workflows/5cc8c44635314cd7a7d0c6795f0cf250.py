@@ -18,7 +18,7 @@ with DAG(**dag_config) as dag:
         workflow_shared_storage={'source': 'Local', 'mode': 'Read/Write', 'provider_options': {}},
         container_resources={'requests': {'cpu': '100.0m', 'memory': '128.0Mi'}, 'limits': {'cpu': '100.0m', 'memory': '128.0Mi'}, 'use_gpu': False},
         piece={'name': 'ImageFilterPiece', 'source_image': 'ghcr.io/iisas/default_domino_pieces:0.9.0-group0', 'repository_url': 'https://github.com/IISAS/default_domino_pieces', 'repository_version': '0.9.0'},
-        piece_input_kwargs={'input_image': {'type': 'fromUpstream', 'upstream_task_id': 'httprequest-edaf8e980a67491a92285160f200341b', 'output_arg': 'base64_bytes_data'}, 'sepia': False, 'black_and_white': False, 'brightness': True, 'darkness': False, 'contrast': False, 'red': False, 'green': True, 'blue': False, 'cool': False, 'warm': False, 'output_type': 'both'}
+        piece_input_kwargs={'input_image': {'type': 'fromUpstream', 'upstream_task_id': 'HttpReques_edaf8e980a67491a92285160f200341b', 'output_arg': 'base64_bytes_data'}, 'sepia': False, 'black_and_white': False, 'brightness': True, 'darkness': False, 'contrast': False, 'red': False, 'green': True, 'blue': False, 'cool': False, 'warm': False, 'output_type': 'both'}
     )()
     HttpReques_edaf8e980a67491a92285160f200341b = Task(
         dag,
